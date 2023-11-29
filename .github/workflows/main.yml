@@ -14,3 +14,5 @@ jobs:
           mobileprovision-base64: ${{ secrets.MOBILEPROVISION_BASE64 }}
           code-signing-identity: ${{ secrets.CODE_SIGNING_IDENTITY }}
           team-id: ${{ secrets.TEAM_ID }}
+          certificate-password: ${{ secrets.PASSWORD }}
+
