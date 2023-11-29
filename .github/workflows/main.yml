@@ -8,6 +8,7 @@ jobs:
       - run: |
              echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
              pwd
+             ls
       - name: Yarn install
         run: |
               echo "Yarn install"
@@ -15,11 +16,12 @@ jobs:
       - name: Pod Install
         run: |
               echo "Pod Install"
+              cd ios
               pod install
       - name: Check out repository code
         uses: yukiarrr/ios-build-action@v1.11.0
         with:
-          project-path: ./ios/ReactSample.xcodeproj
+          project-path: ReactSample.xcodeproj
           p12-base64: ${{ secrets.P12_BASE64 }}
           mobileprovision-base64: ${{ secrets.MOBILEPROVISION_BASE64 }}
           code-signing-identity: ${{ secrets.CODE_SIGNING_IDENTITY }}
