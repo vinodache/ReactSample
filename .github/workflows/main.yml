@@ -15,24 +15,27 @@ jobs:
         with:
           persist-credentials: false
       - name: Yarn install
+        env:
+             NO_FLIPPER: ${{ vars.NO_FLIPPER }}
         run: |
               echo "Yarn install"
-              yarn install
-      - name: Pod Install
-        run: |
-              echo "Pod Install"
               env
-              ls
-              pwd
-              cd ios
-              pod install
-      - name: Check out repository code
-        uses: yukiarrr/ios-build-action@v1.11.0
-        with:
-          project-path: ReactSample.xcodeproj
-          p12-base64: ${{ secrets.P12_BASE64 }}
-          mobileprovision-base64: ${{ secrets.MOBILEPROVISION_BASE64 }}
-          code-signing-identity: ${{ secrets.CODE_SIGNING_IDENTITY }}
-          team-id: ${{ secrets.TEAM_ID }}
-          certificate-password: ${{ secrets.PASSWORD }}
+      #         yarn install
+      # - name: Pod Install
+      #   run: |
+      #         echo "Pod Install"
+      #         env
+      #         ls
+      #         pwd
+      #         cd ios
+      #         pod install
+      # - name: Check out repository code
+      #   uses: yukiarrr/ios-build-action@v1.11.0
+      #   with:
+      #     project-path: ios/ReactSample.xcodeproj
+      #     p12-base64: ${{ secrets.P12_BASE64 }}
+      #     mobileprovision-base64: ${{ secrets.MOBILEPROVISION_BASE64 }}
+      #     code-signing-identity: ${{ secrets.CODE_SIGNING_IDENTITY }}
+      #     team-id: ${{ secrets.TEAM_ID }}
+      #     certificate-password: ${{ secrets.PASSWORD }}
 
