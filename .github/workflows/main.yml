@@ -9,6 +9,10 @@ jobs:
              echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
              pwd
              ls
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
       - name: Yarn install
         run: |
               echo "Yarn install"
