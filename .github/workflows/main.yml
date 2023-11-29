@@ -10,25 +10,25 @@ jobs:
              echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
              pwd
              ls
-      # - name: Checkout code
-      #   uses: actions/checkout@v4
-      #   with:
-      #     persist-credentials: false
-      # - name: Yarn install
-      #   env:
-      #        NO_FLIPPER: ${{ vars.NO_FLIPPER }}
-      #   run: |
-      #         echo "Yarn install"
-      #         env
-      #         yarn install
-      # - name: Pod Install
-      #   run: |
-      #         echo "Pod Install"
-      #         env
-      #         ls
-      #         pwd
-      #         cd ios
-      #         pod install
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Yarn install
+        env:
+             NO_FLIPPER: ${{ vars.NO_FLIPPER }}
+        run: |
+              echo "Yarn install"
+              env
+              yarn install
+      - name: Pod Install
+        run: |
+              echo "Pod Install"
+              env
+              ls
+              pwd
+              cd ios
+              pod install
       - name: Check out repository code
         uses: yukiarrr/ios-build-action@v1.11.0
         with:
