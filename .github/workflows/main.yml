@@ -16,7 +16,7 @@ jobs:
           persist-credentials: false
       - name: Yarn install
         env:
-             NO_FLIPPER: ${{ vars.NO_FLIPPER }}
+             NO_FLIPPER: ${{ tst.vars.NO_FLIPPER }}
         run: |
               echo "Yarn install"
               env
