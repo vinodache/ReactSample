@@ -1,1 +1,28 @@
-Test
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: workflow_dispatch
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: macos-latest
+    steps:
+      - run: |
+             echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+             pwd
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Change to iOS dir
+        run: |
+             echo "Change to iOS dir"
+             ls
+             cd ios
+      - name: IOS Build
+        uses: yukiarrr/ios-build-action@v1.11.0
+        with:
+          project-path: ReactSample.xcodeproj
+          p12-base64: ${{ secrets.P12_BASE64 }}
+          mobileprovision-base64: ${{ secrets.MOBILEPROVISION_BASE64 }}
+          code-signing-identity: ${{ secrets.CODE_SIGNING_IDENTITY }}
+          team-id: ${{ secrets.TEAM_ID }}
+          certificate-password: ${{ secrets.PASSWORD }}
