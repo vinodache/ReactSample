@@ -4,6 +4,7 @@ on: workflow_dispatch
 jobs:
   Explore-GitHub-Actions:
     runs-on: macos-latest
+    environment: dev
     steps:
       - run: |
              echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
