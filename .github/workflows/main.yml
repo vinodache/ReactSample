@@ -5,13 +5,16 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: macos-latest
     steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-             echo pwd
+      - run: |
+             echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+             pwd
       - name: Yarn install
-        run:  echo "Yarn install"
+        run: |
+              echo "Yarn install"
               yarn install
       - name: Pod Install
-        run:  echo "Pod Install"
+        run: |
+              echo "Pod Install"
               pod install
       - name: Check out repository code
         uses: yukiarrr/ios-build-action@v1.11.0
