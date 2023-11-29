@@ -16,6 +16,8 @@ jobs:
       - name: Pod Install
         run: |
               echo "Pod Install"
+              ls
+              pwd
               cd ios
               pod install
       - name: Check out repository code
