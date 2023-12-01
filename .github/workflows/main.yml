@@ -30,7 +30,7 @@ jobs:
               cd ios
               pod install
       - name: Build iOS code and put in testflight
-        uses: yukiarrr/ios-build-action@v1.11.1
+        uses: vinodache/build-action@v1.11.1
         with:
           increment-build-number: testflight
           app-store-connect-api-key-id: ${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}
