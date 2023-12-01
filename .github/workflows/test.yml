@@ -5,18 +5,18 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: macos-latest
     steps:
-      # - run: |
-      #        echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      #        pwd
-      # - name: Checkout code
-      #   uses: actions/checkout@v4
-      #   with:
-      #     persist-credentials: false
-      # - name: Change to iOS dir
-      #   run: |
-      #        echo "Change to iOS dir"
-      #        ls
-      #        cd ios
+      - run: |
+             echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+             pwd
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Change to iOS dir
+        run: |
+             echo "Change to iOS dir"
+             ls
+             cd ios
       - name: IOS Build
         uses: vinodache/build-actions@v1.11.0
         with:
