@@ -29,9 +29,14 @@ jobs:
               pwd
               cd ios
               pod install
-      - name: Check out repository code
-        uses: yukiarrr/ios-build-action@v1.11.0
+      - name: Build iOS code and put in testflight
+        uses: yukiarrr/ios-build-action@v1.11.1
         with:
+          increment-build-number: testflight
+          app-store-connect-api-key-id: ${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}
+          app-store-connect-api-key-issuer-id: ${{ secrets.APP_STORE_CONNECT_API_KEY_ISSUER_ID }}
+          app-store-connect-api-key-base64: ${{ secrets.APP_STORE_CONNECT_API_KEY_BASE64 }}
+          bundle-identifier: ${{ vars.BUNDLE_IDENTIFIER }}
           project-path: ios/ReactSample.xcodeproj
           workspace-path: ios/ReactSample.xcworkspace
           p12-base64: ${{ secrets.P12_BASE64 }}
