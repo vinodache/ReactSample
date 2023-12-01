@@ -3,7 +3,7 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: workflow_dispatch
 jobs:
   Explore-GitHub-Actions:
-    runs-on: macos-latest
+    runs-on: personal
     environment: dev
     steps:
       - run: |
