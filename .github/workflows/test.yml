@@ -18,7 +18,7 @@ jobs:
              ls
              cd ios
       - name: IOS Build
-        uses: vinodache/build-actions@v1.11.0
+        uses: vinodache/build-actions@v1.11.1
         with:
           increment-build-number: testflight
           app-store-connect-api-key-id: ${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}
