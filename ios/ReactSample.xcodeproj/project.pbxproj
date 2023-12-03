@@ -495,10 +495,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 3WB9V59RYC;
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 3WB9V59RYC;
 				ENABLE_BITCODE = NO;
@@ -513,10 +513,10 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.aome.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aome.game;
 				PRODUCT_NAME = ReactSample;
 				PROVISIONING_PROFILE = "6b04a672-e56f-4df1-b3c1-6f3450444dae";
-				PROVISIONING_PROFILE_SPECIFIER = VinodDeveloperProfileMac;
+				PROVISIONING_PROFILE_SPECIFIER = AppStoreProfile;
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = AppStoreProfile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -532,7 +532,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 3WB9V59RYC;
 				INFOPLIST_FILE = ReactSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -545,7 +545,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.aome.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aome.game;
 				PRODUCT_NAME = ReactSample;
 				PROVISIONING_PROFILE = "6b04a672-e56f-4df1-b3c1-6f3450444dae";
 				PROVISIONING_PROFILE_SPECIFIER = AppStoreProfile;
