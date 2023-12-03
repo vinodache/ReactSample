@@ -513,7 +513,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.aome.game;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aome.test1;
 				PRODUCT_NAME = ReactSample;
 				PROVISIONING_PROFILE = "6b04a672-e56f-4df1-b3c1-6f3450444dae";
 				PROVISIONING_PROFILE_SPECIFIER = AppStoreProfile;
@@ -545,7 +545,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.aome.game;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aome.test1;
 				PRODUCT_NAME = ReactSample;
 				PROVISIONING_PROFILE = "6b04a672-e56f-4df1-b3c1-6f3450444dae";
 				PROVISIONING_PROFILE_SPECIFIER = AppStoreProfile;
