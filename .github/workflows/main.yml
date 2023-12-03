@@ -3,7 +3,7 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: workflow_dispatch
 jobs:
   Explore-GitHub-Actions:
-    runs-on: personal
+    runs-on: macos-latest
     environment: dev
     steps:
       - run: |
@@ -29,8 +29,8 @@ jobs:
               pwd
               cd ios
               pod install
-      - name: Build iOS code and put in testflight
-        uses: vinodache/build-actions@v1.11.1
+      - name: Build iOS code 
+        uses: vinodache/build-actions@v1.11.0
         with:
           increment-build-number: testflight
           app-store-connect-api-key-id: ${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}
@@ -44,4 +44,11 @@ jobs:
           code-signing-identity: ${{ secrets.CODE_SIGNING_IDENTITY }}
           team-id: ${{ secrets.TEAM_ID }}
           certificate-password: ${{ secrets.PASSWORD }}
+      - name: Submit test flight
+        uses: apple-actions/upload-testflight-build@v1
+        with:
+          app-path: 'output.ipa'
+          issuer-id: ${{ secrets.APP_STORE_CONNECT_API_KEY_ISSUER_ID }}
+          api-key-id: ${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}
+          api-private-key: ${{ secrets.APP_STORE_CONNECT_API_KEY }}
 
